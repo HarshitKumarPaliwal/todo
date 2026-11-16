@@ -33,7 +33,8 @@ app.post("/signup", async (req, res) => {
         // FIX: signup par bhi cookie server se set kar di (login jaisa)
         res.cookie("token", token, {
           httpOnly: true,
-          sameSite: "lax",
+          secure: true,
+  sameSite: "none",
         });
         res.send({
           success: true,
@@ -65,7 +66,8 @@ app.post("/login", async (req, res) => {
       jwt.sign(useData, "Google", { expiresIn: "1115d" }, (error, token) => {
         res.cookie("token", token, {
           httpOnly: true,
-          sameSite: "lax",
+          secure: true,
+  sameSite: "none",
         });
 
         res.send({
