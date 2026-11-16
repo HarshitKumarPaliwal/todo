@@ -1,0 +1,38 @@
+.task-list {
+  list-style: none;
+  display: grid;
+  grid-template-columns: 80px 1fr 2fr 200px;
+  max-width: 900px;
+  margin: 20px auto;
+  padding: 0;
+  background: #fff;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+.List-header {
+  background: #2563eb;
+  color: #fff;
+  font-weight: bold;
+  padding: 12px;
+}
+.List-item {
+  padding: 12px;
+  border-bottom: 1px solid #e5e7eb;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.delete-item {
+  background: #dc2626;
+  color: #fff;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.update-item {
+  background: #16a34a;
+  color: #fff;
+  padding: 6px 12px;
+  border-radius: 4px;
+  text-decoration: none;
+}
